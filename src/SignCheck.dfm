@@ -1,0 +1,54 @@
+object frmCheckResult: TfrmCheckResult
+  Left = 0
+  Top = 0
+  Caption = #26174#31034#23631#25925#38556#25253#21578
+  ClientHeight = 331
+  ClientWidth = 748
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnResize = FormResize
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lstCheck: TListBox
+    Left = 16
+    Top = 16
+    Width = 617
+    Height = 297
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ItemHeight = 19
+    MultiSelect = True
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnCancel: TButton
+    Left = 648
+    Top = 47
+    Width = 92
+    Height = 25
+    Cancel = True
+    Caption = #20851#38381
+    TabOrder = 1
+    OnClick = btnCancelClick
+  end
+  object btnDelete: TButton
+    Left = 648
+    Top = 16
+    Width = 92
+    Height = 25
+    Cancel = True
+    Caption = #21024#38500#35760#24405#39033
+    TabOrder = 2
+    OnClick = btnDeleteClick
+  end
+end

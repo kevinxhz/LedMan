@@ -1,0 +1,85 @@
+object frmCardType: TfrmCardType
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #25511#21046#21345#22411#21495#36873#25321
+  ClientHeight = 323
+  ClientWidth = 804
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 16
+    Width = 196
+    Height = 13
+    Caption = #35831#27491#30830#36873#25321#26412#36719#20214#31649#29702#30340#25511#21046#21345#22411#21495':'
+  end
+  object lstCardType: TListBox
+    Left = 24
+    Top = 35
+    Width = 521
+    Height = 273
+    ItemHeight = 13
+    Items.Strings = (
+      'GS7020B/GS7020E(GPRS) CS7020B(CDMA)  LED '#26174#31034#23631#25511#21046#21345
+      'GS7030B(GPRS) CS7030B(CDMA) LED '#26174#31034#23631#25511#21046#21345
+      'YL2012A GPRS LED '#26174#31034#23631#25511#21046#21345
+      'YL2010A RS232/RS485 LED '#26174#31034#23631#25511#21046#21345
+      'YL2010AF RS232/RS485 LED '#26174#31034#23631#25511#21046#21345'('#21160#24577#20998#21306')'
+      'GS7020BF/GS7020EF GPRS LED '#26174#31034#23631#25511#21046#21345'('#21160#24577#20998#21306')'
+      'YL2010AR RS232/RS485 LED '#26174#31034#23631#25511#21046'('#25903#25345#20018#21475#21629#20196#28857#25773')'
+      'PD102B RS232/RS485 '#22270#25991#26465#23631#25511#21046#21345
+      'GS7020EF-H '#20844#20132#36710#19987#29992' GPRS LED '#26174#31034#23631#25511#21046#21345'('#21160#24577#20998#21306')'
+      'GS7020B(E)F-W '#20844#20132#36710#19987#29992' GPRS LED '#26174#31034#23631#25511#21046#21345'('#21160#24577#20998#21306', '#25903#25345#25253#31449')'
+      'GS7020BX/GS7020EX '#22810#26102#27573#21516#27493#26174#31034#20896#21517#25253#26102#36710#36733#23631#19987#29992#25511#21046#21345
+      'GS7020BT/GS7020ET(GPRS) CS7020BT(CDMA)  LED '#26174#31034#23631#25511#21046#21345'('#25353#38062#21551#21160#26174#31034#27979#35797')'
+      'GS7030BV2 GPRS LED '#26174#31034#23631#25511#21046#21345
+      'GS7022B/GS7022E(GPRS) CS7022B(CDMA)  LED '#26174#31034#23631#25511#21046#21345'('#21516#26102#25903#25345#30701#20449')'
+      
+        'GS7020BQ/GS7020EQ(GPRS) CS7020BQ(CDMA) '#27668#35937#39044#35686#23631#25511#21046#21345'('#25903#25345'4'#20010'14x16'#30340#39044#35686#22270#26631#26174#31034 +
+        #26495')'
+      'GS7020F GPRS LED Sign Control Card (International Verion)')
+    TabOrder = 0
+    OnClick = lstCardTypeClick
+  end
+  object memoNote: TMemo
+    Left = 560
+    Top = 35
+    Width = 220
+    Height = 225
+    BorderStyle = bsNone
+    Color = clBtnFace
+    Lines.Strings = (
+      'memoNote')
+    TabOrder = 1
+  end
+  object btnOk: TButton
+    Left = 581
+    Top = 283
+    Width = 101
+    Height = 25
+    Caption = #30830#23450
+    Default = True
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object btnCancel: TButton
+    Left = 688
+    Top = 283
+    Width = 92
+    Height = 25
+    Cancel = True
+    Caption = #21462#28040
+    ModalResult = 2
+    TabOrder = 3
+  end
+end
