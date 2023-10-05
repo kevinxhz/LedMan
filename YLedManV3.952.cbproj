@@ -1,0 +1,746 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{f7b8f4d1-c671-4291-8970-5ded5f9ab2e0}</ProjectGuid>
+        <MainSource>YLedManV3.952.cpp</MainSource>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <ProjectVersion>18.6</ProjectVersion>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1025</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Base)'=='true') or '$(Base_iOSDevice64)'!=''">
+        <Base_iOSDevice64>true</Base_iOSDevice64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Cfg_1)'=='true') or '$(Cfg_1_iOSDevice64)'!=''">
+        <Cfg_1_iOSDevice64>true</Cfg_1_iOSDevice64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Cfg_2)'=='true') or '$(Cfg_2_iOSDevice64)'!=''">
+        <Cfg_2_iOSDevice64>true</Cfg_2_iOSDevice64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+        <_TCHARMapping>wchar_t</_TCHARMapping>
+        <BCC_WindowsVersionDefines>NTDDI_VERSION=NTDDI_WINXP;_WIN32_WINNT=_WIN32_WINNT_WINXP</BCC_WindowsVersionDefines>
+        <ILINK_ImageChecksum>true</ILINK_ImageChecksum>
+        <LinkPackageStatics>rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;VirtualTreesD13.lib;vclimg.lib;vclie.lib;IndyProtocols.lib;bcbie.lib</LinkPackageStatics>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <BCC_wamb>true</BCC_wamb>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <BCC_wexc>true</BCC_wexc>
+        <BCC_wprc>true</BCC_wprc>
+        <BCC_wnod>true</BCC_wnod>
+        <BCC_wuse>true</BCC_wuse>
+        <BCC_wdef>true</BCC_wdef>
+        <BCC_wbbf>true</BCC_wbbf>
+        <BCC_wnak>true</BCC_wnak>
+        <ILINK_ObjectSearchPath>D:\liruiming\LedMan\src;D:\liruiming\LedMan;src;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source;C:\Users\Public\Documents\RAD Studio\5.0\BPL;..\GS7020BMan_V3.0\src;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+        <BCC_wstl>true</BCC_wstl>
+        <BCC_winl>true</BCC_winl>
+        <ProjectType>CppVCLApplication</ProjectType>
+        <BCC_wasm>true</BCC_wasm>
+        <BCC_wpin>true</BCC_wpin>
+        <BCC_wcln>true</BCC_wcln>
+        <PackageImports>vclx.bpi;vcl.bpi;dbrtl.bpi;Rave75VCL.bpi;bdertl.bpi;rtl.bpi;bcbie.bpi;vclactnband.bpi;xmlrtl.bpi;bcbsmp.bpi;vcldb.bpi;vcldbx.bpi;dsnap.bpi;dsnapcon.bpi;teeUI.bpi;teedb.bpi;tee.bpi;adortl.bpi;vclib.bpi;ibxpress.bpi;dbxcds.bpi;dbexpress.bpi;DbxCommonDriver.bpi;IndyCore.bpi;IndySystem.bpi;IndyProtocols.bpi;inet.bpi;IntrawebDB_90_100.bpi;Intraweb_90_100.bpi;VclSmp.bpi;vclie.bpi;websnap.bpi;webdsnap.bpi;inetdbbde.bpi;inetdbxpress.bpi;soaprtl.bpi;VirtualTreesD13D.bpi;$(PackageImports)</PackageImports>
+        <BCC_wimp>true</BCC_wimp>
+        <BCC_wucp>true</BCC_wucp>
+        <BCC_wamp>true</BCC_wamp>
+        <BCC_wpar>false</BCC_wpar>
+        <TASM_wpro>true</TASM_wpro>
+        <ILINK_UserVersion>3.93</ILINK_UserVersion>
+        <PackageLibs>rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib</PackageLibs>
+        <BCC_wstu>true</BCC_wstu>
+        <IncludePath>res\;src\;$(BDS)\include;$(BDS)\include\vcl;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source;$(IncludePath)</IncludePath>
+        <BCC_wstv>true</BCC_wstv>
+        <AllPackageLibs>rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;VirtualTreesD13.lib;vclimg.lib;vclie.lib;IndyProtocols.lib;bcbie.lib;VirtualTreesR.lib</AllPackageLibs>
+        <ILINK_LibraryPath>D:\Program Files (x86)\SafeNet China\MicroDog SDK V4.0\win32\Win32c\cbuilder\;res\;NT77\;src\;$(BDS)\lib\obj;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source;C:\Users\Public\Documents\RAD Studio\7.0\Bpl;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <Multithreaded>true</Multithreaded>
+        <TASM_wicg>true</TASM_wicg>
+        <SanitizedProjectName>YLedManV3_952</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <VerInfo_Release>5</VerInfo_Release>
+        <VerInfo_Build>2</VerInfo_Build>
+        <VerInfo_Locale>2052</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=Wireless LED Manager;FileVersion=3.9.5.2;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=Wireless LED Manager;ProductName=Wireless LED Manager;ProductVersion=3.9.1.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSDevice64)'!=''">
+        <Defines>NO_STRICT;$(Defines)</Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>YLedManV3.952_Icon1.ico</Icon_MainIcon>
+        <OutputExt>exe</OutputExt>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
+        <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>YLedManV3.952_Icon1.ico</Icon_MainIcon>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
+        <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <BCC_wuse>true</BCC_wuse>
+        <BCC_InstructionSet>5</BCC_InstructionSet>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+        <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <BRCC_EnableMultiByte>true</BRCC_EnableMultiByte>
+        <IntermediateOutputDir>Debug</IntermediateOutputDir>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <BCC_StackFrames>true</BCC_StackFrames>
+        <IncludePath>$(PROJ)\src;$(PROJ);$(IncludePath)</IncludePath>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_iOSDevice64)'!=''">
+        <Defines>_DEBUG;$(Defines)</Defines>
+        <BRCC_Defines>UNICODE;$(BRCC_Defines)</BRCC_Defines>
+        <BT_BuildType>Debug</BT_BuildType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <Defines>_DEBUG;$(Defines)</Defines>
+        <BRCC_Defines>UNICODE;$(BRCC_Defines)</BRCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <Defines>_DEBUG;$(Defines)</Defines>
+        <BRCC_Defines>UNICODE;$(BRCC_Defines)</BRCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DynamicRTL>false</DynamicRTL>
+        <BCC_winl>false</BCC_winl>
+        <IntermediateOutputDir>Release</IntermediateOutputDir>
+        <ILINK_LibraryPath>$(BDS)\lib\debug;D:\liruiming\software\source\release;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <TASM_Debugging>None</TASM_Debugging>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_iOSDevice64)'!=''">
+        <Defines>NDEBUG;$(Defines)</Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <Defines>NDEBUG;$(Defines)</Defines>
+        <LinkPackageStatics>rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;rtl.lib;vcl.lib;dbrtl.lib;adortl.lib;xmlrtl.lib;vclactnband.lib;vclx.lib;inet.lib;IndyCore.lib;IndySystem.lib;VirtualTreesD13.lib;vclimg.lib;vclie.lib;IndyProtocols.lib;bcbie.lib;VirtualTreesR.lib</LinkPackageStatics>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <Defines>NDEBUG;$(Defines)</Defines>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <Source>
+                    <Source Name="MainSource">YLedManV3.952.cpp</Source>
+                </Source>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">True</VersionInfo>
+                    <VersionInfo Name="MajorVer">3</VersionInfo>
+                    <VersionInfo Name="MinorVer">9</VersionInfo>
+                    <VersionInfo Name="Release">5</VersionInfo>
+                    <VersionInfo Name="Build">2</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">2052</VersionInfo>
+                    <VersionInfo Name="CodePage">936</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription">Wireless LED Manager</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">3.9.5.2</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename">Wireless LED Manager</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">Wireless LED Manager</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">3.9.1.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs"/>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams"/>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="DebugCWD"/>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteParams"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="UseRemoteLauncher">False</Parameters>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">False</Parameters>
+                    <Parameters Name="Debug Symbols Search Path"/>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <Linker>
+                    <Linker Name="LibPrefix"/>
+                    <Linker Name="LibSuffix"/>
+                    <Linker Name="LibVersion"/>
+                </Linker>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                    <ProjectProperties Name="IndexFiles">False</ProjectProperties>
+                </ProjectProperties>
+                <HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Count">10</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item0">$(PROJ)\src;$(PROJ);$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;;src;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item1">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;;src;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item2">$(PROJ)\src;$(PROJ);$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;;src</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item3">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;;src</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item4">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item5">D:\liruiming\software\source;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;D:\liruiming\LedMan\src;D:\liruiming\LedMan;src</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item6">$(PROJ)\src;$(PROJ);;$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;D:\liruiming\LedMan\src;D:\liruiming\LedMan;src</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item7">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;$(PROJ)\src;$(PROJ);</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item8">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;D:\liruiming\LedMan\src;D:\liruiming\LedMan;src</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item9">$(BDS)\include;$(BDS)\include\dinkumware;$(BDS)\include\vcl;D:\liruiming\LedMan\src;D:\liruiming\LedMan;D:\liruiming\software\source</HistoryLists_hlIncludePath>
+                </HistoryLists_hlIncludePath>
+                <HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;;$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk;D:\liruiming\LedMan\src;D:\liruiming\LedMan;src;C:\Users\Public\Documents\Soft Gems\Virtual Treeview\Source;C:\Users\Public\Documents\RAD Studio\5.0\BPL</HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Item1">$(BDS)\lib\debug;D:\liruiming\software\source\release;$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk;D:\liruiming\LedMan\src;D:\liruiming\LedMan;src</HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Item2">$(BDS)\lib\debug;$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk;</HistoryLists_hlILINK_LibraryPath>
+                </HistoryLists_hlILINK_LibraryPath>
+                <HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Count">1</HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Item0">_DEBUG;NO_STRICT</HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Item1">NDEBUG;NO_STRICT</HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Item2">_DEBUG;UNICODE;NO_STRICT</HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Item3">_DEBUG;NO_STRICT; UNICODE </HistoryLists_hlDefines>
+                    <HistoryLists_hlDefines Name="Item4">_DEBUG;USE_XSERVER;NO_STRICT</HistoryLists_hlDefines>
+                </HistoryLists_hlDefines>
+                <HistoryLists_hlILINK_MaxErrors>
+                    <HistoryLists_hlILINK_MaxErrors Name="Count">1</HistoryLists_hlILINK_MaxErrors>
+                    <HistoryLists_hlILINK_MaxErrors Name="Item0">0</HistoryLists_hlILINK_MaxErrors>
+                </HistoryLists_hlILINK_MaxErrors>
+                <HistoryLists_hlILINK_FileAlignment>
+                    <HistoryLists_hlILINK_FileAlignment Name="Count">1</HistoryLists_hlILINK_FileAlignment>
+                    <HistoryLists_hlILINK_FileAlignment Name="Item0">0x200</HistoryLists_hlILINK_FileAlignment>
+                </HistoryLists_hlILINK_FileAlignment>
+                <HistoryLists_hlILINK_ObjectAlignment>
+                    <HistoryLists_hlILINK_ObjectAlignment Name="Count">1</HistoryLists_hlILINK_ObjectAlignment>
+                    <HistoryLists_hlILINK_ObjectAlignment Name="Item0">4096</HistoryLists_hlILINK_ObjectAlignment>
+                </HistoryLists_hlILINK_ObjectAlignment>
+                <HistoryLists_hlDCC_CodePage>
+                    <HistoryLists_hlDCC_CodePage Name="Count">1</HistoryLists_hlDCC_CodePage>
+                    <HistoryLists_hlDCC_CodePage Name="Item0">0</HistoryLists_hlDCC_CodePage>
+                </HistoryLists_hlDCC_CodePage>
+                <HistoryLists_hlILINK_BaseAddress>
+                    <HistoryLists_hlILINK_BaseAddress Name="Count">1</HistoryLists_hlILINK_BaseAddress>
+                    <HistoryLists_hlILINK_BaseAddress Name="Item0">0x00400000</HistoryLists_hlILINK_BaseAddress>
+                </HistoryLists_hlILINK_BaseAddress>
+                <HistoryLists_hlILINK_HeapCommitSize>
+                    <HistoryLists_hlILINK_HeapCommitSize Name="Count">1</HistoryLists_hlILINK_HeapCommitSize>
+                    <HistoryLists_hlILINK_HeapCommitSize Name="Item0">0x00001000</HistoryLists_hlILINK_HeapCommitSize>
+                </HistoryLists_hlILINK_HeapCommitSize>
+                <HistoryLists_hlILINK_HeapReserveSize>
+                    <HistoryLists_hlILINK_HeapReserveSize Name="Count">1</HistoryLists_hlILINK_HeapReserveSize>
+                    <HistoryLists_hlILINK_HeapReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_HeapReserveSize>
+                </HistoryLists_hlILINK_HeapReserveSize>
+                <HistoryLists_hlILINK_StackCommitSize>
+                    <HistoryLists_hlILINK_StackCommitSize Name="Count">1</HistoryLists_hlILINK_StackCommitSize>
+                    <HistoryLists_hlILINK_StackCommitSize Name="Item0">0x00002000</HistoryLists_hlILINK_StackCommitSize>
+                </HistoryLists_hlILINK_StackCommitSize>
+                <HistoryLists_hlILINK_StackReserveSize>
+                    <HistoryLists_hlILINK_StackReserveSize Name="Count">1</HistoryLists_hlILINK_StackReserveSize>
+                    <HistoryLists_hlILINK_StackReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_StackReserveSize>
+                </HistoryLists_hlILINK_StackReserveSize>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k140.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp140.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+                <HistoryLists_hlBCC_MaxIdentifierLength>
+                    <HistoryLists_hlBCC_MaxIdentifierLength Name="Count">1</HistoryLists_hlBCC_MaxIdentifierLength>
+                    <HistoryLists_hlBCC_MaxIdentifierLength Name="Item0">250</HistoryLists_hlBCC_MaxIdentifierLength>
+                </HistoryLists_hlBCC_MaxIdentifierLength>
+                <HistoryLists_hlTASM_HashTableCapacity>
+                    <HistoryLists_hlTASM_HashTableCapacity Name="Count">1</HistoryLists_hlTASM_HashTableCapacity>
+                    <HistoryLists_hlTASM_HashTableCapacity Name="Item0">8192</HistoryLists_hlTASM_HashTableCapacity>
+                </HistoryLists_hlTASM_HashTableCapacity>
+                <HistoryLists_hlTASM_MaxSymbolLength>
+                    <HistoryLists_hlTASM_MaxSymbolLength Name="Count">1</HistoryLists_hlTASM_MaxSymbolLength>
+                    <HistoryLists_hlTASM_MaxSymbolLength Name="Item0">12</HistoryLists_hlTASM_MaxSymbolLength>
+                </HistoryLists_hlTASM_MaxSymbolLength>
+                <HistoryLists_hlTASM_Passes>
+                    <HistoryLists_hlTASM_Passes Name="Count">1</HistoryLists_hlTASM_Passes>
+                    <HistoryLists_hlTASM_Passes Name="Item0">1</HistoryLists_hlTASM_Passes>
+                </HistoryLists_hlTASM_Passes>
+                <HistoryLists_hlTASM_VersionId>
+                    <HistoryLists_hlTASM_VersionId Name="Count">1</HistoryLists_hlTASM_VersionId>
+                    <HistoryLists_hlTASM_VersionId Name="Item0">0</HistoryLists_hlTASM_VersionId>
+                </HistoryLists_hlTASM_VersionId>
+                <HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Item0">Debug</HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Item1">Release</HistoryLists_hlIntermediateOutputDir>
+                </HistoryLists_hlIntermediateOutputDir>
+                <HistoryLists_hlDCC_Define>
+                    <HistoryLists_hlDCC_Define Name="Count">1</HistoryLists_hlDCC_Define>
+                    <HistoryLists_hlDCC_Define Name="Item0">DEBUG</HistoryLists_hlDCC_Define>
+                </HistoryLists_hlDCC_Define>
+                <HistoryLists_hlBRCC_Defines>
+                    <HistoryLists_hlBRCC_Defines Name="Count">1</HistoryLists_hlBRCC_Defines>
+                    <HistoryLists_hlBRCC_Defines Name="Item0">UNICODE;</HistoryLists_hlBRCC_Defines>
+                </HistoryLists_hlBRCC_Defines>
+            </CPlusPlusBuilder.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="iOSDevice64">True</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <ObjFiles Include="D:\Program Files (x86)\SafeNet China\MicroDog SDK V4.0\win32\Win32c\cbuilder\MHWIN32BC.OBJ">
+            <BuildOrder>62</BuildOrder>
+            <IgnorePath>true</IgnorePath>
+        </ObjFiles>
+        <CppCompile Include="src\About.cpp">
+            <Form>frmAbout</Form>
+            <DependentOn>src\About.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <None Include="src\act.h">
+            <BuildOrder>11</BuildOrder>
+        </None>
+        <CppCompile Include="src\ActDefine.cpp">
+            <Form>frmActDefine</Form>
+            <DependentOn>src\ActDefine.h</DependentOn>
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\ActiveType.cpp">
+            <Form>frmActiveType</Form>
+            <DependentOn>src\ActiveType.h</DependentOn>
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\AddCards.cpp">
+            <Form>frmAddCards</Form>
+            <DependentOn>src\AddCards.h</DependentOn>
+            <BuildOrder>40</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\AdjustClockSetup.cpp">
+            <Form>frmAdjustClockSetup</Form>
+            <DependentOn>src\AdjustClockSetup.h</DependentOn>
+            <BuildOrder>49</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\AdjustLightness.cpp">
+            <Form>frmAdjustLightness</Form>
+            <DependentOn>src\AdjustLightness.h</DependentOn>
+            <BuildOrder>68</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\BrightnessSetup.cpp">
+            <Form>frmBrightnessSetup</Form>
+            <DependentOn>src\BrightnessSetup.h</DependentOn>
+            <BuildOrder>69</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\CardList.cpp">
+            <Form>frmCardList</Form>
+            <DependentOn>src\CardList.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\CardType.cpp">
+            <Form>frmCardType</Form>
+            <DependentOn>src\CardType.h</DependentOn>
+            <BuildOrder>35</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\CommConfig.cpp">
+            <Form>frmCommConfig</Form>
+            <DependentOn>src\CommConfig.h</DependentOn>
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\ConfigForm.cpp">
+            <Form>frmConfig</Form>
+            <DependentOn>src\ConfigForm.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\CustMsgDlg.cpp">
+            <Form>frmMain</Form>
+            <DependentOn>src\CustMsgDlg.h</DependentOn>
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\DialogReTx.cpp">
+            <Form>frmAutoReTx</Form>
+            <DependentOn>src\DialogReTx.h</DependentOn>
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\DotFont16.cpp">
+            <DependentOn>src\DotFont16.h</DependentOn>
+            <BuildOrder>31</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\DotFont24.cpp">
+            <DependentOn>src\DotFont24.h</DependentOn>
+            <BuildOrder>33</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\DotFont32.cpp">
+            <DependentOn>src\DotFont32.h</DependentOn>
+            <BuildOrder>32</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\dtu.cpp">
+            <DependentOn>src\dtu.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\FlashTest.cpp">
+            <Form>frmFlashTest</Form>
+            <DependentOn>src\FlashTest.h</DependentOn>
+            <BuildOrder>48</BuildOrder>
+        </CppCompile>
+        <None Include="src\Global.h">
+            <BuildOrder>25</BuildOrder>
+        </None>
+        <CppCompile Include="src\GpsMap.cpp">
+            <Form>frmGpsMap</Form>
+            <DependentOn>src\GpsMap.h</DependentOn>
+            <BuildOrder>66</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\LedDigit.cpp">
+            <Form>frmLedDigit</Form>
+            <DependentOn>src\LedDigit.h</DependentOn>
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\log.cpp">
+            <DependentOn>src\log.h</DependentOn>
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Login.cpp">
+            <Form>LoginForm</Form>
+            <DependentOn>src\Login.h</DependentOn>
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\ParkDigit.cpp">
+            <Form>frmParkDigit</Form>
+            <DependentOn>src\ParkDigit.h</DependentOn>
+            <BuildOrder>35</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Password.cpp">
+            <Form>frmPassword</Form>
+            <DependentOn>src\Password.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS2012A.cpp">
+            <DependentOn>src\prog_GS2012A.h</DependentOn>
+            <BuildOrder>55</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS2012A_S.cpp">
+            <DependentOn>src\prog_GS2012A_S.h</DependentOn>
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS2012B.cpp">
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
+        <None Include="src\prog_GS2012B.h">
+            <BuildOrder>58</BuildOrder>
+        </None>
+        <CppCompile Include="src\prog_GS7020B.cpp">
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BF.cpp">
+            <DependentOn>src\prog_GS7020BF.h</DependentOn>
+            <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BF_HEB.cpp">
+            <DependentOn>src\prog_GS7020BF_HEB.h</DependentOn>
+            <BuildOrder>38</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BF_W.cpp">
+            <DependentOn>src\prog_GS7020BF_W.h</DependentOn>
+            <BuildOrder>40</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BP.cpp">
+            <DependentOn>src\prog_GS7020BP.h</DependentOn>
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BT.cpp">
+            <DependentOn>src\prog_GS7020BT.h</DependentOn>
+            <BuildOrder>41</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020BX.cpp">
+            <DependentOn>src\prog_GS7020BX.h</DependentOn>
+            <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020H.cpp">
+            <DependentOn>src\prog_GS7020H.h</DependentOn>
+            <BuildOrder>61</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020HFA.cpp">
+            <DependentOn>src\prog_GS7020HFA.h</DependentOn>
+            <BuildOrder>70</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7020HQ.cpp">
+            <DependentOn>src\prog_GS7020HQ.h</DependentOn>
+            <BuildOrder>65</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7022B.cpp">
+            <DependentOn>src\prog_GS7022B.h</DependentOn>
+            <BuildOrder>46</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7024E.cpp">
+            <DependentOn>src\prog_GS7024E.h</DependentOn>
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7030B.cpp">
+            <DependentOn>src\prog_GS7030B.h</DependentOn>
+            <BuildOrder>37</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS7030BV2.cpp">
+            <DependentOn>src\prog_GS7030BV2.h</DependentOn>
+            <BuildOrder>42</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS9020.cpp">
+            <BuildOrder>60</BuildOrder>
+        </CppCompile>
+        <None Include="src\prog_GS9020.h">
+            <BuildOrder>60</BuildOrder>
+        </None>
+        <CppCompile Include="src\prog_GS9020F_GPS.cpp">
+            <DependentOn>src\prog_GS9020F_GPS.h</DependentOn>
+            <BuildOrder>67</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS9023.cpp">
+            <DependentOn>src\prog_GS9023.h</DependentOn>
+            <BuildOrder>64</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS9025.cpp">
+            <DependentOn>src\prog_GS9025.h</DependentOn>
+            <BuildOrder>63</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_GS9026.cpp">
+            <BuildOrder>52</BuildOrder>
+        </CppCompile>
+        <None Include="src\prog_GS9026.h">
+            <BuildOrder>52</BuildOrder>
+        </None>
+        <CppCompile Include="src\prog_SN2P.cpp">
+            <DependentOn>src\prog_SN2P.h</DependentOn>
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\prog_YL2010A.cpp">
+            <BuildOrder>54</BuildOrder>
+        </CppCompile>
+        <None Include="src\prog_YL2010A.h">
+            <BuildOrder>55</BuildOrder>
+        </None>
+        <CppCompile Include="src\prog_YL2010AR.cpp">
+            <DependentOn>src\prog_YL2010AR.h</DependentOn>
+            <BuildOrder>36</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\RemoteControl.cpp">
+            <Form>frmRemoteControl</Form>
+            <DependentOn>src\RemoteControl.h</DependentOn>
+            <BuildOrder>42</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\ReTxSetup.cpp">
+            <Form>frmReTxSetup</Form>
+            <DependentOn>src\ReTxSetup.h</DependentOn>
+            <BuildOrder>55</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\RootName.cpp">
+            <Form>frmRootName</Form>
+            <DependentOn>src\RootName.h</DependentOn>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SearchAct.cpp">
+            <Form>frmSearchAct</Form>
+            <DependentOn>src\SearchAct.h</DependentOn>
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SearchCard.cpp">
+            <Form>frmSearchCard</Form>
+            <DependentOn>src\SearchCard.h</DependentOn>
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SelectFont.cpp">
+            <Form>frmFontSelect</Form>
+            <DependentOn>src\SelectFont.h</DependentOn>
+            <BuildOrder>30</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SerialPort.cpp">
+            <DependentOn>src\SerialPort.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SignCheck.cpp">
+            <Form>frmCheckResult</Form>
+            <DependentOn>src\SignCheck.h</DependentOn>
+            <BuildOrder>47</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\SysConfig.cpp">
+            <DependentOn>src\SysConfig.h</DependentOn>
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\TextEditForm.cpp">
+            <Form>wndTextEdit</Form>
+            <DependentOn>src\TextEditForm.h</DependentOn>
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\TxLogView.cpp">
+            <Form>frmTxLogView</Form>
+            <DependentOn>src\TxLogView.h</DependentOn>
+            <BuildOrder>19</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Warnning.cpp">
+            <Form>frmWarnning</Form>
+            <DependentOn>src\Warnning.h</DependentOn>
+            <BuildOrder>45</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Weather.cpp">
+            <Form>frmWeather</Form>
+            <DependentOn>src\Weather.h</DependentOn>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Weather_16x16_C1.cpp">
+            <Form>frmWeather_16x16_C1</Form>
+            <DependentOn>src\Weather_16x16_C1.h</DependentOn>
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="src\Weather_64x64.cpp">
+            <Form>frmWeather64x64</Form>
+            <DependentOn>src\Weather_64x64.h</DependentOn>
+            <BuildOrder>71</BuildOrder>
+        </CppCompile>
+        <None Include="YLedMan.cbproj">
+            <BuildOrder>0</BuildOrder>
+        </None>
+        <CppCompile Include="YLedManV3.952.cpp">
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <ResFiles Include="YLedManV3.952.res">
+            <BuildOrder>24</BuildOrder>
+        </ResFiles>
+        <FormResources Include="src\SignCheck.dfm"/>
+        <FormResources Include="src\Login.dfm"/>
+        <FormResources Include="src\CardList.dfm"/>
+        <FormResources Include="src\FlashTest.dfm"/>
+        <FormResources Include="src\SelectFont.dfm"/>
+        <FormResources Include="src\AdjustClockSetup.dfm"/>
+        <FormResources Include="src\DialogReTx.dfm"/>
+        <FormResources Include="src\CustMsgDlg.dfm"/>
+        <FormResources Include="src\AdjustLightness.dfm"/>
+        <FormResources Include="src\BrightnessSetup.dfm"/>
+        <FormResources Include="src\GpsMap.dfm"/>
+        <FormResources Include="src\ReTxSetup.dfm"/>
+        <FormResources Include="src\CardType.dfm"/>
+        <FormResources Include="src\TextEditForm.dfm"/>
+        <FormResources Include="src\SearchCard.dfm"/>
+        <FormResources Include="src\Weather.dfm"/>
+        <FormResources Include="src\About.dfm"/>
+        <FormResources Include="src\CommConfig.dfm"/>
+        <FormResources Include="src\RemoteControl.dfm"/>
+        <FormResources Include="src\TxLogView.dfm"/>
+        <FormResources Include="src\Password.dfm"/>
+        <FormResources Include="src\ActDefine.dfm"/>
+        <FormResources Include="src\RootName.dfm"/>
+        <FormResources Include="src\Warnning.dfm"/>
+        <FormResources Include="src\ActiveType.dfm"/>
+        <FormResources Include="src\ConfigForm.dfm"/>
+        <FormResources Include="src\SearchAct.dfm"/>
+        <FormResources Include="src\ParkDigit.dfm"/>
+        <FormResources Include="src\AddCards.dfm"/>
+        <FormResources Include="src\Weather_16x16_C1.dfm"/>
+        <FormResources Include="src\Weather_64x64.dfm"/>
+        <FormResources Include="src\LedDigit.dfm"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

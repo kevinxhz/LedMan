@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{ED8E848A-7C09-4082-82B1-0135A4948239}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="YLedManV3.95.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="YLedManV3_95">
+			<MSBuild Projects="YLedManV3.95.cbproj"/>
+		</Target>
+		<Target Name="YLedManV3_95:Clean">
+			<MSBuild Targets="Clean" Projects="YLedManV3.95.cbproj"/>
+		</Target>
+		<Target Name="YLedManV3_95:Make">
+			<MSBuild Targets="Make" Projects="YLedManV3.95.cbproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="YLedManV3_95"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="YLedManV3_95:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="YLedManV3_95:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
